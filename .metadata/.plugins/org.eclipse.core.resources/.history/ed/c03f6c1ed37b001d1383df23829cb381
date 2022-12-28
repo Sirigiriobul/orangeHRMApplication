@@ -1,0 +1,78 @@
+package testNg;
+
+import java.sql.Driver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByName;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class TestngOrangeHrmLoginPage {
+	WebDriver driver;
+
+	@BeforeTest
+	public void ApplicationLaunch() {
+	System.setProperty("webdriver.edge.driver",".//browserDriverFiles/msedgedriver.exe" );
+String orangeHrmApplicationUrl="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/auth/login";
+driver=new EdgeDriver();
+driver.get(orangeHrmApplicationUrl);
+driver.manage().window().maximize();
+}
+	@Test
+	public void logInPage() {
+	WebElement	logInButtonElement=driver.findElement(By.name("txtUsername"));
+	logInButtonElement.sendKeys("Obul123");	
+	
+WebElement	passwordElement=driver.findElement(By.id("txtPassword"));
+	passwordElement.sendKeys("Obulobul@123");
+	
+	WebElement logInButton=driver.findElement(By.name("Submit"));
+	logInButton.click();
+	
+	}
+	//id="menu_pim_viewPimModule"
+	@Test
+	public void mouseHoverOperation () throws InterruptedException {
+		Actions act=new Actions(driver);
+	WebElement	pimElement =driver.findElement(By.id("menu_pim_viewPimModule"));
+	Thread.sleep(1000);
+	act.moveToElement(pimElement).build().perform();
+WebElement addEmployeeElement=driver.findElement(By.id("menu_pim_addEmployee"));
+//<a href="/orangehrm-4.2.0.1/symfony/web/index.php/pim/addEmployee" id="menu_pim_addEmployee">Add Employee</a>
+addEmployeeElement.click();
+//<input class="formInputText" maxlength="30" type="text" name="firstName" id="firstName">
+WebElement	firstNameElement=driver.findElement(By.name("firstName"));
+firstNameElement.sendKeys("Sirigiri");
+Actions act2=new Actions(driver);
+act2.sendKeys(Keys.TAB).build().perform();
+
+act.sendKeys("Obulesh");
+	}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,7 @@
+<suite name="apsrtcApplication">
+ <test name="automatingEmailOrPhone">
+  <classes>
+   <class name="apsrtcApplication.ApsrtcAlertTesting"/>
+</classes>
+</test>
+</suite>

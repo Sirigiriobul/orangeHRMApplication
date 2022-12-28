@@ -1,0 +1,24 @@
+package testNg;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class OrangeHrmApplicationAllElementsAutomation {
+	WebDriver driver;
+
+@Test
+	public void setUp() {
+	System.setProperty("webdriver.chrome.driver", "./browserDriverFiles/msedgedriver.exe");
+String	orangeHrmApplicationUrl="http://127.0.0.1/orangehrm-4.2.0.1/symfony/web/index.php/auth/login";
+driver.get(orangeHrmApplicationUrl);
+
+	}
+@Test
+public void logInCredentials() {
+WebElement userNameElement=driver.findElement(By.id("txtUsername"));
+
+
+}
+}

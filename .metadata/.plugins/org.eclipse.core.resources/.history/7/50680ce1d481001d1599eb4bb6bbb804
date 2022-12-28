@@ -1,0 +1,12 @@
+package testNg;
+
+import org.openqa.selenium.WebDriver;
+
+public class OrangeHrmApplicationAllElementsAutomation {
+
+	public void setUp() {
+	WebDriver driver;
+	System.setProperty("webdriver.chrome.driver", "./browserDriverFiles/msedgedriver.exe");
+	
+	}
+}

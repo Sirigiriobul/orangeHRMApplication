@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [apsrtcApplication]">
+  <test thread-count="5" name="automatingEmailOrPhone(failed)">
+    <classes>
+      <class name="apsrtcApplication.ApsrtcAlertTesting">
+        <methods>
+          <include name="setUp"/>
+          <include name="applicationTest"/>
+        </methods>
+      </class> <!-- apsrtcApplication.ApsrtcAlertTesting -->
+    </classes>
+  </test> <!-- automatingEmailOrPhone(failed) -->
+</suite> <!-- Failed suite [apsrtcApplication] -->
